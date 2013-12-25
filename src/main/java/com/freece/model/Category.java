@@ -8,4 +8,16 @@ package com.freece.model;
  * To change this template use File | Settings | File Templates.
  */
 public class Category {
+	private String categoryName;
+	
+	   public Category(String name)
+	   {
+	        this.categoryName = name;
+	   }
+	   public void setCategoryName(String name) {
+	        this.categoryName = name;
+	    }
+	    public String getName() {
+	        return categoryName;
+	    }
 }
