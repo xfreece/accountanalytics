@@ -16,7 +16,10 @@ public class MainPage extends AbstractBasePage {
         super(parameters);
 
         BookmarkablePageLink aboutLink = new BookmarkablePageLink("link1", ListTransactionsPage.class);
+        BookmarkablePageLink categoryLink = new BookmarkablePageLink("link2", ListCategoryPage.class);
         aboutLink.add(new Label("link1text", "Go to About page"));
+        categoryLink.add(new Label("link2text", "See Categorys Bitch!"));
+        add(categoryLink);
         add(aboutLink);
 
     }
