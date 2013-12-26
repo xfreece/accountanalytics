@@ -1,5 +1,6 @@
 package com.freece.service;
 
+import com.freece.model.Category;
 import com.freece.model.Transaction;
 
 import java.util.ArrayList;
@@ -16,6 +17,18 @@ public class MockServiceFacade implements ServiceFacade {
             list.add(new Transaction(new Date(), "Statoil", 756));
         }
         return list;
+    }
 
+    private int getCategoriesCounter = 1;
+    @Override
+    public List<Category> getCategories(Transaction transaction) {
+        ArrayList<Category> list = new ArrayList<Category>();
+        for (int i = 0; i < (getCategoriesCounter % 3); i++) {
+            list.add(new Category("Lunchmat"));
+        }
+        getCategoriesCounter++;
+        System.out.println(list.size());
+        System.out.println("getCategoriesCounter = " + getCategoriesCounter);
+        return list;
     }
 }

@@ -1,9 +1,10 @@
 package com.freece.model;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Transaction {
+public class Transaction implements Serializable {
     final private Date date;
     final private String description;
     final private int amount;

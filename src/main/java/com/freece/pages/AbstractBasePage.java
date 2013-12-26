@@ -7,14 +7,23 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 public class AbstractBasePage extends WebPage {
     final protected PageParameters pageParameters;
+    private ServiceFacade serviceFacade;
 
     public AbstractBasePage(final PageParameters parameters) {
         super(parameters);
         pageParameters = parameters;
     }
 
+    @Override
+    protected void onInitialize() {
+        super.onInitialize();
+        if (serviceFacade == null) {
+            serviceFacade = new MockServiceFacade();
+        }
+    }
+
     protected ServiceFacade getServices() {
-        return new MockServiceFacade();
+        return serviceFacade;
     }
 }
 
