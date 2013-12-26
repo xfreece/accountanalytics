@@ -66,3 +66,46 @@ h3 {
 	font-size:24pt;
 	color:#092E67;
 }
+
+.listtrans_category {
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color: #aaaaaa;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.listtrans_close {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    text-decoration: none;
+}
+.listtrans_close:hover {
+    color: #000000;
+    text-decoration: none;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    cursor: pointer;
+}
+
+.listtrans_list_odd {
+    background-color: #5555ff;
+}
+
+.listtrans_list_even {
+    background-color: #9999ff;
+}
+
+.listtrans_table {
+    border-spacing: 0px;
+    border: 0px;
+}
+
+.listtrans_table td,tr {
+    padding: 8px;
+}
